@@ -10,6 +10,5 @@ class Project_info(models.Model):
     goals = models.CharField(max_length=100)
     author = models.CharField(max_length=100)
 
-
     def __str__(self): #вывод query set (коллекция записей класса (таблицы))
-        return f'{self.project_name} - {self.author}%'
+            return f'{self.project_name} - {self.author}%'
