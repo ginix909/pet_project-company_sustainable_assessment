@@ -1,0 +1,25 @@
+{% extends 'csa_app/base.html' %}
+{% load static %}
+
+{% block title %} Текущая База Данных {% endblock %}
+
+{% block css_additional %}
+<link rel="stylesheet" href="{% static 'csa_app/css/csa_app_base.css' %}">
+<link rel="stylesheet" ref="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css">
+<link rel="stylesheet" ref='https://use.fontawesome.com/releases/v5.8.2/css/all.css'>
+{% endblock%}
+
+{% block content %}
+    <div class="features">
+        <h3> Вы оценили все индикаторы</h3>
+        {% csrf_token %}
+        {% for indicator in data %}
+            <div class="alert alert-warning">
+                <p>{{ indicator }}</p>
+            </div>
+        {% endfor %} <br>
+        <div class="redirect">
+            <a href="{% url 'analysis' %}">  Перейти к анализу индикаторов  </a>
+        </div>
+    </div>
+{% endblock %}

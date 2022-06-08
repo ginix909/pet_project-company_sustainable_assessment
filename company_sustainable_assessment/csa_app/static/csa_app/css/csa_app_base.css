@@ -1,0 +1,111 @@
+body {
+    background-color: #2c2c2c;
+}
+
+aside {
+    float: left;
+    background: #181818;
+    width: 20%;
+    padding: 2.5%;
+    height: 100vh;
+    color: #fff;
+    border-right: 5px solid #4d4d4d;
+}
+
+aside img {
+    width: 80px;
+    float: left;
+}
+
+aside .logo{
+    font-size: 40px;
+    margin-left: 10px;
+    font-weight: bold;
+    color: #fff;
+    position: relative;
+    top: -5px;
+}
+
+aside h3 {
+    margin-top: 40px;
+    font-size: 28px;
+    position: relative;
+    left: 20px;
+}
+
+aside ul {list-style: none}
+aside ul li {
+    color: #fff;
+    display: block;
+    margin-top: 20px;
+    position: relative;
+    left: -20px;
+    transition: transform .6s ease;
+}
+
+aside ul li:hover {
+    color: #eb5959;
+    text-decoration:none;
+    transform: scale(1.05);
+}
+
+aside ul a {
+    text-decoration:none;
+}
+
+aside ul a:hover {
+    color: #eb5959;
+    text-decoration:none;
+    transform: scale(1.05);
+}
+
+main .features {
+    float: left;
+    color: #fff;
+    margin-top: 10px;
+    position: relative;
+    left: 10px;
+}
+
+form {
+    width: 900px;
+}
+
+.alert-warning {
+    float: left;
+    clear: both;
+    width: 950px;
+    text-align: left;
+}
+
+main .visual{
+    width:800px;
+    color: #eb5959;
+    font-size: 15px;
+}
+
+
+.redirect a:hover {
+    color: #eb5959;
+    text-decoration:none;
+    transform: scale(1.05);
+    font-size: 20px;
+}
+
+.redirect a {
+    color: #ffff00;
+    text-decoration:none;
+    transform: scale(1.05);
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.f_page h3,em {
+    color: #fff;
+    width: 90%;
+    position: relative;
+    left: 20px;
+    top: 35px;
+}
+
+

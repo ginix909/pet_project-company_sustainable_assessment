@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="f4182ce0-0854-452d-b072-d40166331a5a" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/../../../../.idea/.name" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../.idea/company_sustainable_assessment.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/csa_app.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../.idea/pet_project-sustainable_development_index.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../.idea/pet_project-csa.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../company_sustainable_assessment/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../../company_sustainable_assessment/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../company_sustainable_assessment/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../../company_sustainable_assessment/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../admin.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../indicators.csv" beforeDir="false" afterPath="$PROJECT_DIR$/../../indicators.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../models.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../views.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/../../../db.sqlite3" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="HTML File" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../../../.." />
+  </component>
+  <component name="ProjectId" id="2A1T67vtuK8sfK8BMrdeqXiBRWQ" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+    <option name="showMembers" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="463" y="119" key="FileChooserDialogImpl" timestamp="1654175933441">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="463" y="119" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1654175933441" />
+  </component>
+</project>

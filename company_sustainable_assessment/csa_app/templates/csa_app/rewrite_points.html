@@ -1,0 +1,34 @@
+{% extends 'csa_app/base.html' %}
+{% load static %}
+
+{% block title %} Оценка индикаторов {% endblock %}
+
+{% block css_additional %}
+<link rel="stylesheet" href="{% static 'csa_app/css/csa_app_base.css' %}">
+<link rel="stylesheet" ref='https://use.fontawesome.com/releases/v5.8.2/css/all.css'>
+{% endblock%}
+
+{% block content%}
+    <div class="features">
+        <h3> Только оценить индикатор, пусть показывает пока сколько уже стоит балллов </h3>
+        {{ indicator_db.indicator }} <br>
+        {{ indicator_db.question }} <br>
+        <form method="post" >
+            {% csrf_token %}
+            <div class="visual">
+                {{ form.points }} <br>
+            </div>
+            <input type="radio" name="points" value="5" checked> Данные раскрыты за 3 года и более <br>
+            <input type="radio" name="points" value="4" checked> Данные раскрыты за 2 года <br>
+            <input type="radio" name="points" value="3" checked> Данные раскрыты за 1 год <br>
+            <input type="radio" name="points" value="2" checked> Конкретное направление работы в области УР
+            иллюстрируется конкретными примерами <br>
+            <input type="radio" name="points" value="1" checked> Внимание компании к теме заявлено в общем виде – со
+            ссылкой на корпоративный документ <br>
+            <input type="radio" name="points" value="0" checked> Информация не представлена ни в каком виде<br>
+            <span> {{ error }}</span>
+            <button class='btn btn-success' type="submit"> Записать оценку индикатора </button>
+        </form>
+    </div>
+
+{% endblock%}

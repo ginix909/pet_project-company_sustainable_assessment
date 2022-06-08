@@ -1,0 +1,38 @@
+{% extends 'csa_app/base.html' %}
+{% load static %}
+
+{% block title %} Текущая База Данных {% endblock %}
+
+{% block css_additional %}
+<link rel="stylesheet" href="{% static 'csa_app/css/csa_app_base.css' %}">
+<link rel="stylesheet" ref="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css">
+<link rel="stylesheet" ref='https://use.fontawesome.com/releases/v5.8.2/css/all.css'>
+{% endblock%}
+
+{% block content %}
+    <div class="features">
+        <h3> Результаты анализа ваших показателей устойчивости компании</h3>
+        {% csrf_token %}
+        <i> Ваша компания набрала {{ total_points }} баллов </i><br>
+        <i> Учитывая индикаторы, которые вы не оценивали, ваша компания могла максимально набрать
+            {{ company_max_points }} баллов </i><br>
+        <i> Всего по 43-м индикатором ваша компания могла бы максимально набрать {{ points_max }} баллов </i><br>
+        <br>
+        <i> Вы не оценивали такие индикаторы как: </i>
+            <ul>
+                {% for indicator in not_evaluated %}
+                <li>{{ indicator }}</li>
+                {% endfor %}
+            </ul>
+        <a href="{% url 'not_evaluated' %}">  Рекомендации по "неоцениваемым" индикаторам  </a><br>
+        <br>
+        <i> Вы оценили в "0" баллов такие индикаторы как: </i>
+            <ul>
+                {% for indicator in zero_evaluated %}
+                <li>{{ indicator }}</li>
+                {% endfor %}
+            </ul>
+        <a href="{% url 'zero_evaluated' %}">  Рекомендации по "нулевым" индикаторам  </a>
+    </div>
+
+{% endblock %}
