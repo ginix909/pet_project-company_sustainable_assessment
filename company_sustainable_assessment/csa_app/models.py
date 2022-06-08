@@ -28,17 +28,17 @@ class CompanyInstance(models.Model):
         verbose_name_plural = 'Записи в БД'
 
 class Indicators(models.Model):
-    number = models.IntegerField()
+    # number = models.IntegerField(null=True)
     indicator = models.CharField( max_length=255)
     question = models.CharField( max_length=400)
-    points = models.IntegerField()
+    points = models.IntegerField(null=True, blank=True)
 
     def __str__(self):
-        return self.indicator
+        return (f'{self.indicator}: {self.question}:{self.points}-баллов')
 
-# from adaptor.model import CsvDbModel
-# class IndicatorsModel(CsvDbModel):
-#
-#     class Meta:
-#         delimiter = ";"
-#         dbModel =Indicators
+    def get_absolute_url(self):
+        '''вренет адрес на который пойдем когда нажмем кнопку сабмит при перезаписи данных в форму'''
+        if self.id == 10:
+            return '/csa/result_db'
+        return f'/csa/{self.id+1}/update'
+

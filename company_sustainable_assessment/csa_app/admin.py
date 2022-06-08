@@ -5,4 +5,4 @@ admin.site.register(Project_info)
 
 @admin.register(Indicators)
 class IndicatorsAdmin(admin.ModelAdmin):
-    list_display = ['number','indicator','question','points']
+    list_display = ['indicator','question','points']
