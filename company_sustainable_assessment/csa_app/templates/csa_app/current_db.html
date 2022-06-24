@@ -17,6 +17,12 @@
             <div class="alert alert-warning">
                 <p>{{ indicator }}</p>
             </div>
+        {% endfor %} <br>
+    </div>
+    <div class="features">
+        <h3> Здесь визуализируется текущее состояние БД CompanyInstance</h3>
+        {% for info in company_info %}
+            <p>{{ info }}</p>
         {% endfor %}
     </div>
 {% endblock %}

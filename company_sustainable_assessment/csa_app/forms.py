@@ -1,32 +1,43 @@
-from django.forms import ModelForm, TextInput, DateInput, NumberInput
+from django.forms import ModelForm, TextInput, NumberInput, Textarea, ChoiceField
 from .models import CompanyInstance, Indicators
+from django import forms
 
+legal_forms_list= {
+    ('АО','Акционерное общество'),
+    ('ПАО','Публичное акционерное общество'),
+    ('НАО','Непубличное акционерное общество'),
+    ('НКО','Некоммерческая организация'),
+}
 class CompanyInstanceForm(ModelForm): #создали форму, которая привязана к модели
     class Meta: #позволяет описать некие реквизиты модели
         model = CompanyInstance
-        fields = '__all__'
-        # fields = ['company_name', 'company_sector']
+        # fields = '__all__'
+        fields = ['company_name', 'company_sector','legal_form','year_of_analysis']
+        # legal_form = forms.ChoiceField(choices=legal_forms_list)
         widgets= {
-            'company_name': TextInput(attrs={
+            'company_name': Textarea(attrs={
                 'class': 'form-control',
-                'placeholder': 'Название компании'
+                'placeholder': 'Название компании',
+                'cols': 50,
+                'rows': 2,
             }),
-            'company_sector': TextInput(attrs={
+            'company_sector': Textarea(attrs={
                 'class': 'form-control',
-                'placeholder': 'Сектор'
+                'placeholder': 'Сектор',
+                'cols': 50,
+                'rows':1,
             }),
-            'legal_form': TextInput(attrs={
+            'legal_form': Textarea(attrs={
                 'class': 'form-control',
-                'placeholder': 'ОПФ'
+                'placeholder': 'ОПФ',
+                'cols': 50,
+                'rows':1,
             }),
-            'company_age': TextInput(attrs={
+            'year_of_analysis': NumberInput(attrs={
                 'class': 'form-control',
-                'placeholder': 'Возраст'
+                'placeholder': 'Анализируемый год',
+                'cols': 50,
             }),
-            'recording_date': DateInput(attrs={
-                'class': 'form-control',
-                'placeholder': 'Дата записи'
-            })
         }
 
 class IndicatorsForm(ModelForm):
@@ -37,13 +48,17 @@ class IndicatorsForm(ModelForm):
         model = Indicators
         fields = ['indicator','question','points']
         widgets= {
-            'indicator': TextInput(attrs={
+            'indicator': Textarea(attrs={
                 'class': 'form-control',
-                'placeholder': 'Индикатор'
+                'placeholder': 'Индикатор',
+                'rows': 2,
+                'cols': 80,
             }),
-            'question': TextInput(attrs={
+            'question': Textarea(attrs={
                 'class': 'form-control',
-                'placeholder': 'Вопрос'
+                'placeholder': 'Вопрос',
+                'rows': 2,
+                'cols':80,
             }),
             'points': NumberInput(attrs={
                 'class': 'form-control',

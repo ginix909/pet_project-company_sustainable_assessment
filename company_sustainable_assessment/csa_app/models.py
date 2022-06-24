@@ -1,44 +1,37 @@
 from django.db import models
-from django.urls import reverse
-from django.utils.text import slugify
-# Create your models here.
-
-class Project_info(models.Model): #я не использую эту БД. хотел так тупо вывести инфу о проекте.
-    project_name = models.CharField(max_length=20)
-    relevance = models.CharField(max_length=100)
-    description = models.CharField(max_length=100)
-    goals = models.CharField(max_length=100)
-    author = models.CharField(max_length=100)
-
-    def __str__(self): #вывод query set (коллекция записей класса (таблицы))
-            return f'{self.project_name} - {self.author}%'
 
 class CompanyInstance(models.Model):
-    company_name = models.CharField('Название', max_length=70 )
-    company_sector = models.CharField('Сектор промышленности',max_length=70)
-    legal_form = models.CharField('Орг.-правовая форма',max_length=70)
-    company_age = models.IntegerField('Возраст компании',blank=True)
-    recording_date = models.DateField('Дата записи', default = '2000-01-01')
+    company_name = models.CharField('Название', max_length=70, blank=True, default='' )
+    company_sector = models.CharField('Сектор промышленности',max_length=70, blank=True, default='')
+    legal_form = models.CharField('Орг.-правовая форма',max_length=70, default='')
+    year_of_analysis = models.IntegerField('Календарный год для анализа',blank=True, null=True)
 
     def __str__(self):
-        return self.company_name
+        return (f'Название компании: {self.company_name}. Сектор: {self.company_sector}. '
+                f'Анализируемый год: {self.year_of_analysis}')
+
+    def get_absolute_url(self):
+        '''вренет адрес на который пойдем когда нажмем кнопку сабмит при перезаписи данных в форму'''
+        return f'/csa/{self.id}/update_company_info'
 
     class Meta:
+        '''пожалуй единственный участок кода в проекте, который я не знаю зачем. но по-моему, он добавляет
+        куда-то название вот эти. называет что-то, что в этом проекте не выводится..'''
         verbose_name = 'Запись в БД'
         verbose_name_plural = 'Записи в БД'
 
 class Indicators(models.Model):
-    # number = models.IntegerField(null=True)
-    indicator = models.CharField( max_length=255)
-    question = models.CharField( max_length=400)
+    indicator = models.CharField( max_length=500)
+    question = models.CharField( max_length=500)
     points = models.IntegerField(null=True, blank=True)
+    indicator_values = models.CharField(max_length=1000,blank=True)
 
     def __str__(self):
         return (f'{self.indicator}: {self.question}:{self.points}-баллов')
 
     def get_absolute_url(self):
         '''вренет адрес на который пойдем когда нажмем кнопку сабмит при перезаписи данных в форму'''
-        if self.id == 10:
+        if self.id == 43:
             return '/csa/result_db'
         return f'/csa/{self.id+1}/update'
 

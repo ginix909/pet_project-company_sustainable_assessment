@@ -17,11 +17,15 @@
         <h3> Навигация </h3>
         <ul>
             <a href="{% url 'csa_app_main' %}"> <li> <i class="fas fa-home"></i> Главная </li> </a>
-            <a href="https://www.sustainabledevelopmentindex.org/"> <li> <i class="fa-solid fa-info"></i> Информация </li> </a>
+            <a href="https://www.sustainabledevelopmentindex.org/"> <li> <i class="fa-solid fa-info"></i> Устойчивое развитие это </li> </a>
+            <a href="https://madte.st/j2pD2RHH"> <li> Проверьте свои знания в области УР </li> </a>
+            <a href="{% url 'company_instance_update' pk=1 %}"> <li> Введите общую информацию о компании </li> </a>
             <a href="{% url 'indicators_update' pk=1 %}"> <li> Оценить компанию </li> </a>
-            <a href="https://madte.st/j2pD2RHH"> <li> Оцените знания в области УР </li> </a>
-            <a href="{% url 'current_db' %}"> <li> Показать текущую базу данных индикаторов и баллов </li> </a>
+            <a href="{% url 'current_db' %}"> <li> Показать текущую БД Индикаторы, Информация компании </li> </a>
             <a href="{% url 'empty_points' %}"> <li> Обнулить баллы индикаторов </li> </a>
+            <a href="{% url 'analysis' %}">  <li> Перейти к анализу индикаторов </li> </a>
+            <a href="{% url 'prospects' %}">  <li> Перспективы развития проекта </li> </a>
+
         </ul>
     </aside>
     <main>

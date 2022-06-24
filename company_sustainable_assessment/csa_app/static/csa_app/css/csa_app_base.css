@@ -59,7 +59,8 @@ aside ul a:hover {
     transform: scale(1.05);
 }
 
-main .features {
+.features {
+    width: 800px;
     float: left;
     color: #fff;
     margin-top: 10px;
@@ -108,4 +109,34 @@ main .visual{
     top: 35px;
 }
 
+
+.analysis {
+    width: 950px;
+    line-height: 20px;
+    float: left;
+    color: #fff;
+    margin-top: 10px;
+    margin-bottom: 30px;
+    position: relative;
+    left: 30px;
+}
+
+main .not_evaluated {
+    width: 850px;
+    line-height: 20px;
+    float: left;
+    color: #66FFFF;
+    margin-top: 10px;
+    position: relative;
+    left: 10px;
+}
+.prospects {
+    width: 800px;
+    line-height: 20px;
+    float: left;
+    color: #FFA500;
+    margin-top: 10px;
+    position: relative;
+    left: 20px;
+}
 
